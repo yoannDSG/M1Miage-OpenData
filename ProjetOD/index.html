@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset=utf-8>
+		<title>Outil décision Sport</title>
+		<style>
+			body { margin: 0; }
+			canvas { width: 50%;}
+            #equipes { display: inline-flex; }
+            #teamStats1 { min-width: 50% }
+            #teamStats2 { min-width: 50% }
+            #saison {display: inline;}
+		</style>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	</head>
+	<body>
+        <script src="paparse.js"></script>
+        <script src="script.js"></script>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <input type="file" id="fileCsv" name="fileCsv" src="../L1_2018-2019.csv" />
+
+        <div id="saison">
+            <div id="result">
+
+                <p>Total des matchs sur la saison : <span id="totaGame"></span></p>
+                <p>Total des Victoire à Domicile : <span id="totaHome"></span></p>
+                <p>Total des Matchs Nuls: <span id="totaDraw"></span></p>
+                <p>Total des Victoire à l'extérieur : <span id="totaAway"></span></p>
+                <p>Total des cotes justes : <span id="totaCote"></span></p>
+                
+            </div>
+            <div id="columnchart_material" style="width: 600px; height: 400px;"></div>
+        </div>  
+        <div id="equipes" style="padding-left: 1%">
+            <div id="teamStats1">
+                <h2>Stats pour une équipe</h2>
+                <select id="teamSelect1">
+                    
+                </select>
+
+                <button id="validClubStats1">Stats</button>
+                <p>Total match : <span id="totalGameClub1"></span></p>
+                <p>Total victoire : <span id="totalWinClub1"></span></p>
+                <p>Total égalité : <span id="totalDrawClub1"></span></p>
+                <p>Total defaite : <span id="totalLooseClub1"></span></p>
+                <p>Total match maison : <span id="totaHomeGameClub1"></span></p>
+                <p>Total match maison gagné : <span id="totaHomeWinClub1"></span></p>
+                <p>Total match away : <span id="totaAwayGameClub1"></span></p>
+                <p>Total match away gagné : <span id="totaAwayWinClub1"></span></p>
+                <p>Pourcentage de réussite des cotes de Bet365 : <span id="GoodBetsB3651"></span></p>
+                <!--<p>Pourcentage de réussite des cotes de Bet&Win : <span id="GoodBetsBW1"></span></p>-->
+                <div id="piechart1" style="width: 600px; height: 400px;"></div>
+
+            </div>
+            
+            <div id="teamStats2">
+                <h2>Stats pour une équipe</h2>
+                <select id="teamSelect2">
+                    
+                </select>
+
+                <button id="validClubStats2">Stats</button>
+                <p>Total match : <span id="totalGameClub2"></span></p>
+                <p>Total victoire : <span id="totalWinClub2"></span></p>
+                <p>Total égalité : <span id="totalDrawClub2"></span></p>
+                <p>Total defaite : <span id="totalLooseClub2"></span></p>
+                <p>Total match maison : <span id="totaHomeGameClub2"></span></p>
+                <p>Total match maison gagné : <span id="totaHomeWinClub2"></span></p>
+                <p>Total match away : <span id="totaAwayGameClub2"></span></p>
+                <p>Total match away gagné : <span id="totaAwayWinClub2"></span></p>
+                <p>Pourcentage de réussite des cotes de Bet365 : <span id="GoodBetsB3652"></span></p>
+                <!--<p>Pourcentage de réussite des cotes de Bet&Win : <span id="GoodBetsBW2"></span></p>-->
+                <div id="piechart2" style="width: 600px; height: 400px;"></div>
+
+            </div>
+            
+        </div>
+	</body>
+</html>
